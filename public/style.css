@@ -1,0 +1,129 @@
+* {
+	font-family: 'Ubuntu', sans-serif;
+}
+h1 {
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: 300;
+    color: #444;
+}
+
+.postWrapper{
+	/*list-style: none;
+	font-family: 'Ubuntu', sans-serif;
+	border: 1px solid #999999;
+	border-radius: 3px;
+	background-color: #f5f5f5;
+	align-items: center;
+	padding: 15px;
+	padding-top: 5px;
+	margin-bottom: 10px;	
+	min-width: 300px;*/
+}
+.postWrapper span{
+	margin-right: 10px;
+
+}
+.postInlineWrapper{
+	display: inline-block;
+	list-style: none;
+	font-family: 'Ubuntu', sans-serif;
+	border: 1px solid #999999;
+	border-radius: 3px;
+	background-color: #f5f5f5;
+	align-items: center;
+	padding: 15px;
+	padding-top: 5px;
+	margin-bottom: 10px;	
+	min-width: 300px;
+
+}
+.postContent {
+	display: flex;
+	flex-wrap: wrap;
+}
+.post {
+	margin-top: 10px;
+	margin-left: 10px;
+	white-space: pre-line;
+}
+
+.postImage {
+	max-height: 150px;
+	max-width: 150px;
+	margin-top: 15px;
+	min-height: 50px;
+	min-width: 50px;
+	
+}
+.imgClicked {
+	max-height: none;
+	max-width: none;
+}
+
+.replyLink {
+	color: #FF6600;
+}
+.replyLink:hover{
+	color: #0066FF;
+}
+
+.posts {
+	padding: 0;
+	margin: 0;
+	margin-top: 10px;
+	list-style-position:inside;
+}
+
+
+.reactapp {
+	margin-bottom: 100px;
+	display: flex;
+}
+
+input {
+	height: 30px;
+}
+
+textarea {
+	min-height: 80px;
+	min-width: 350px;
+}
+input[type="submit"] {
+	height: 36px;
+	width: 120px;
+	background: none;
+	box-shadow: none;
+	outline: 0;
+	border: 1px solid black;
+}
+input[type="button"] {
+	height: 35px;
+	width: 120px;
+	background: none;
+	box-shadow: none;
+	outline: 0;
+	border: 1px solid black;
+}
+
+.intervalForm {
+	margin-left: 50px;
+}
+form {
+	margin-top: 10px;
+	display: flex;
+	flex-direction: column;
+}
+
+.intervalForm input[type="text"] {
+	width: 149px;
+}
+
+/*.intervalSubmits {
+	margin-top: 10px;
+	display: flex;
+	justify-content: space-around;
+}*/
+
+.intervalSubmits input[type="button"]{
+	width: 150px;
+}
