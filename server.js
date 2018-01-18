@@ -77,7 +77,7 @@ app.use(bodyParser.urlencoded({
 
 
 app.use(bodyParser.json());
-app.post("/addmessage", urlencodedParser, function (request, response) {
+/*app.post("/addmessage", urlencodedParser, function (request, response) {
 	if(!request.body) return response.sendStatus(400);
 	var data;
 
@@ -94,7 +94,7 @@ app.post("/addmessage", urlencodedParser, function (request, response) {
 	response.send("");
 	//console.log("addmessage");
 });
-
+*/
 
 app.post('/addmsg', upload.single('fileInput'), (req, res) => {
   let formData = req.body;
@@ -103,17 +103,19 @@ app.post('/addmsg', upload.single('fileInput'), (req, res) => {
 	data = fs.readFileSync("data.json", "utf8");
 	data = JSON.parse(data);
 	var format = "";
-	if(req.file.originalname == "jpeg" || req.file.originalname == "png"){
-		format = req.file.originalname;
-	}
 	
-	if(req.file && format){
-		//console.log(req.file.originalname);
-		post = {
-		id : data[data.length-1].id + 1,
-		time : getDateTime(),
-		message : formData.message,
-		image : "img/" + (data[data.length-1].id + 1) + '.' + format
+	
+	if(req.file){
+		if(req.file.originalname == "jpeg" || req.file.originalname == "png"){
+		format = req.file.originalname;
+		}
+		if(format){
+			post = {
+			id : data[data.length-1].id + 1,
+			time : getDateTime(),
+			message : formData.message,
+			image : "img/" + (data[data.length-1].id + 1) + '.' + format
+		}
 	}
 	fs.rename('./public/img/' + req.file.originalname, './public/img/' + post.id + '.' + format, function(err) {
     if ( err ) console.log('ERROR: ' + err);

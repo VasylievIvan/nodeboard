@@ -40,19 +40,28 @@ class Userlist extends React.Component {
 
 		handleSubmit1(event) {
 			event.preventDefault();
-			if(this.refs.fileInput.files[0].type == "image/png" || this.refs.fileInput.files[0].type == "image/jpeg"){
-				const config = {
-					headers: { 'content-type': 'multipart/form-data' }
-				};
+			if(this.refs.fileInput.files.length){
+				if(this.refs.fileInput.files[0].type == "image/png" || this.refs.fileInput.files[0].type == "image/jpeg"){
+					const config = {
+						headers: { 'content-type': 'multipart/form-data' }
+					};
+					var data = new FormData();
+					data.append("message", this.state.inputValue1);
+					//console.log(this.refs.fileInput.files[0].type);
+					data.append("fileInput", this.refs.fileInput.files[0], this.refs.fileInput.files[0].type);     
+					axios.post('/addmsg', data, config)
+					.then(function(response){
+					});
+				} else {
+					alert("Недопустимый формат файла.");
+
+				}
+			}else{
 				var data = new FormData();
 				data.append("message", this.state.inputValue1);
-				//console.log(this.refs.fileInput.files[0].type);
-				data.append("fileInput", this.refs.fileInput.files[0], this.refs.fileInput.files[0].type);     
-				axios.post('/addmsg', data, config)
-				.then(function(response){
+				axios.post('/addmsg', data)
+					.then(function(response){
 				});
-			} else {
-				alert("Недопустимый формат файла.");
 			}
 			this.refs.messageInput.value = '';
 			this.refs.fileInput.value = '';
