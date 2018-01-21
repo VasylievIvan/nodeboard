@@ -165,7 +165,7 @@ class Userlist extends React.Component {
 				<form id="form" enctype="multipart/form-data" ref="messageForm" onSubmit={this.handleSubmit1} accept="image/png, image/jpeg">
 				<textarea value={this.state.value1} onChange={this.handleChange1} ref="messageInput" />
 				<input type="file" name="fileInput" ref="fileInput" id="fileInput" />
-				<input type="submit" value="Хуяк" />
+				<input type="submit" value="Send" />
 				</form>
 				</div>
 				)

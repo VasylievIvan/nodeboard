@@ -2,43 +2,49 @@
     {
         "id": 1,
         "time": "2018/01/13 14:54:44",
-        "message": "Добро пожаловать!\nВы попали на имиджборд.\nИмиджборд — это такой форум, где к каждому посту можно прикрепить картинку.",
+        "message": "Welcome!\nYou are on imageboard.\nImageboard is a type of Internet forum which operates mostly via posting images.",
         "image": ""
     },
     {
         "id": 2,
         "time": "2018/01/18 23:43:45",
-        "message": "Вот так вот.",
+        "message": "Here we go.",
         "image": "img/2.jpeg"
     },
     {
         "id": 3,
         "time": "2018/01/18 23:56:32",
-        "message": "Данный имиджборд поддерживает изображения формата JPEG и PNG.",
+        "message": "This imageboard supports JPEG and PNG formats.",
         "image": ""
     },
     {
         "id": 4,
         "time": "2018/01/19 00:07:29",
-        "message": "Так же можно \"ответить\" на пост, сделав на него ссылку. Ссылка имеет вид >>[номер поста].\r\nВот так: >>1.",
+        "message": "You can also \"reply\" to post, by making link on it. Link looks like >>[message number].\r\nExample: >>1.",
         "image": ""
     },
     {
         "id": 5,
         "time": "2018/01/19 00:09:07",
-        "message": "При клике на ссылку вас перенесёт к нему.",
+        "message": "When you click on the link, you will be taken to the post.",
         "image": ""
     },
     {
         "id": 6,
         "time": "2018/01/19 00:09:46",
-        "message": ">>50\r\nЭто ответ на пост, которого не существует(пока что), он не является ссылкой. Как только этот пост появится, ответ станет ссылкой.",
+        "message": ">>50\r\nThis is an reply to a post that does not exist, it is not a link. As soon as this post appears, the reply becomes a link.",
         "image": ""
     },
     {
         "id": 7,
         "time": "2018/01/19 00:11:25",
-        "message": "Всё это работает на React + Node.js, исходный код вы можете найти по ссылке: <a href=\"https://github.com/VasylievIvan/nodeboard\">github.com/VasylievIvan/nodeboard</a>.",
+        "message": "All this works on React + Node.js, you can find the source code by the link: <a href=\"https://github.com/VasylievIvan/nodeboard\">github.com/VasylievIvan/nodeboard</a>(still on work).",
         "image": ""
+    },
+    {
+        "id": 8,
+        "time": "2018/01/21 15:42:31",
+        "message": "You can click on image preview to see the full size image.",
+        "image": "img/8.jpeg"
     }
 ]
